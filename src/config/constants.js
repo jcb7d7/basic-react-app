@@ -1,0 +1,1 @@
+export const USER_SERVICE_PATH = 'https://jsonplaceholder.typicode.com/users';
