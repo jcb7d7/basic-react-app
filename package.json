@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config ./webpack.config.js --mode development",
     "start": "nodemon --exec babel-node server.js",
-    "bs": "npm run build && npm run start"
+    "bs": "npm run build && npm run start",
+    "build:docker": "docker build -t bleacher-report-interview .",
+    "start:docker": "docker run -p 3001:3001 bleacher-report-interview:latest"
   },
   "author": "John Brandenburg",
   "license": "ISC",
@@ -29,11 +31,9 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.3.1"
+    "webpack-cli": "^3.3.0"
   },
   "dependencies": {
-    "bluebird": "^3.5.4",
     "express": "^4.16.4",
     "path": "^0.12.7"
   }
