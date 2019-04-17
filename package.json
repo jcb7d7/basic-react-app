@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node server.js",
-    "build": "babel src --out-dir dist --copy-files"
+    "build": "webpack --config ./webpack.config.js --mode development",
+    "start": "nodemon --exec babel-node server.js"
   },
   "author": "John Brandenburg",
   "license": "ISC",
@@ -16,10 +16,15 @@
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
     "fetch": "^1.1.0",
     "nodemon": "^1.18.11",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "sass": "^1.18.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
     "express": "^4.16.4",
