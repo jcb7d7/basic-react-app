@@ -4,7 +4,9 @@ class Users extends React.Component {
        
     constructor(props) {
         super(props);
-        this.state = { people: [] };
+        this.state = {
+            people: []
+        };
     }
     
     componentDidMount() {
@@ -21,7 +23,6 @@ class Users extends React.Component {
                 <h1>Our team:</h1>
                 <ul>
                    Output team member information here using the User component defined above
-
                 </ul>
             </div>
         );
@@ -39,3 +40,5 @@ const User = (props) => {
     
     return (<div className="username"><a href={email}>{props.name}</a><div className="badge">{company}</div></div>);
 };
+
+export default Users;
