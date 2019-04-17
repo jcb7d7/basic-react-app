@@ -8,14 +8,6 @@ class Users extends React.Component {
             people: []
         };
     }
-    
-    componentDidMount() {
-       
-    }
-    
-    componentWillUnmount() {
-    
-    }
 
     render() {
     	return( 
