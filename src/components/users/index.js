@@ -23,7 +23,7 @@ class Users extends React.Component {
                     {this.state.people.length > 0 &&
                     this.state.people.map((val, index) => {
                         return (
-                            <li>
+                            <li key={index}>
                                 <h2>{val.name}</h2>
                                 <h3>{val.company.name}</h3>
                                 <a href={`mailto:${val.email}`}>{val.email}</a>
@@ -35,18 +35,6 @@ class Users extends React.Component {
             </div>
         );
     }
-};
-
-const formatEmailLink = (email) => {
-    return `emailto:${email}`;
-};
-
-const User = (props) => {
-  
-  const email = formatEmailLink(props.email);
-   const company = props.company !== undefined ? props.company : "none";
-    
-    return (<div className="username"><a href={email}>{props.name}</a><div className="badge">{company}</div></div>);
 };
 
 export default Users;
